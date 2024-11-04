@@ -67,7 +67,11 @@ impl Display for ChunkType {
 }
 
 impl ChunkType {
-    fn bytes(&self) -> [u8; 4] {
+    pub fn length() -> u32 {
+        4
+    }
+    
+    pub fn bytes(&self) -> [u8; 4] {
         self.data
     }
     
